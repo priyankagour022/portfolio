@@ -3,8 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Priyanka Gour | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+    let prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+  let currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector("header").classList.remove("header-hide");
+  } else {
+    document.querySelector("header").classList.add("header-hide");
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+const blogData = [
+  {
+    title: "Complete Data Structures And Algorithims Roadmap",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar arcu et risus malesuada, ac aliquet turpis convallis.",
+    link: "https://gourpriyanka.hashnode.dev/complete-data-structures-and-algorithims-roadmap",
+    image: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/vpOeXr5wmR4/upload/84f1449c880e657e86185a905c28f431.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp",
+  }
+];
+
+const blogContainer = document.getElementById("blog-container");
+
+// Create HTML for each blog post
+blogData.forEach(blog => {
+  const blogElement = `
+    <a href="${blog.link}" target="_blank" class="blog-post">
+      <img src="${blog.image}" alt="${blog.title}">
+      <div class="blog-details">
+        <h3 class="blog-title">${blog.title}</h3>
+        <p class="blog-description">${blog.description}</p>
+      </div>
+    </a>
+  `;
+
+  blogContainer.insertAdjacentHTML("beforeend", blogElement);
+});
+
+    </script>
 </head>
 <body>
     <header>
@@ -14,7 +54,9 @@
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
 		    <li><a href="#Certifications">Certifications</a></li>
+		    <li><a href="#blog">Blogs</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -85,6 +127,121 @@ By showcasing this project on a portfolio website, we can demonstrate our skills
                 </div>
             </div>
         </section>
+        <section class="skills" id="skills">
+        <div class="container">
+		  <h2>Skills</h2>
+		  <div class="skill-container">
+		    <div class="skill">
+		      <h3>Java</h3>
+		      <div class="stars-outer">
+			<div class="stars-inner"></div>
+		      </div>
+		      <span>4.8</span>
+		    </div>
+		    <div class="skill">
+		      <h3>MySQL</h3>
+		      <div class="stars-outer">
+			<div class="stars-inner"></div>
+		      </div>
+		      <span>4.5</span>
+		    </div>
+		    <div class="skill">
+		      <h3>Javascript</h3>
+		      <div class="stars-outer">
+			<div class="stars-inner"></div>
+		      </div>
+		      <span>4</span>
+		    </div>
+		    <div class="skill">
+		      <h3>Python</h3>
+		      <div class="stars-outer">
+			<div class="stars-inner"></div>
+		      </div>
+		      <span>4</span>
+		    </div>
+		    <div class="skill">
+		      <h3>C++</h3>
+		      <div class="stars-outer">
+			<div class="stars-inner"></div>
+		      </div>
+		      <span>4.3</span>
+		    </div>
+		    <div class="skill">
+		      <h3>HTML</h3>
+		      <div class="stars-outer">
+			<div class="stars-inner"></div>
+		      </div>
+		      <span>4.1</span>
+		    </div>
+		    <div class="skill">
+		      <h3>CSS</h3>
+		      <div class="stars-outer">
+			<div class="stars-inner"></div>
+		      </div>
+		      <span>4.5</span>
+		    </div>
+		    <div class="skill">
+		      <h3>Wordpress</h3>
+		      <div class="stars-outer">
+			<div class="stars-inner"></div>
+		      </div>
+		      <span>4</span>
+		    </div>
+		    <div class="skill">
+		      <h3>Computer Networking</h3>
+		      <div class="stars-outer">
+			<div class="stars-inner"></div>
+		      </div>
+		      <span>4.1</span>
+		    </div>
+		    <div class="skill">
+		      <h3>Data Structures and Algorithms</h3>
+		      <div class="stars-outer">
+			<div class="stars-inner"></div>
+		      </div>
+		      <span>4.5</span>
+		    </div>
+		    <div class="skill">
+		      <h3>Operating Systems</h3>
+		      <div class="stars-outer">
+			<div class="stars-inner"></div>
+		      </div>
+		      <span>4.1</span>
+		    </div>
+		    <div class="skill">
+		      <h3>Linux</h3>
+		      <div class="stars-outer">
+			<div class="stars-inner"></div>
+		      </div>
+		      <span>3.5</span>
+		    </div>
+		    <div class="skill">
+		      <h3>Docker</h3>
+		      <div class="stars-outer">
+			<div class="stars-inner"></div>
+		      </div>
+		      <span>3</span>
+		    </div>
+		    <div class="skill">
+		      <h3>GIT and GITHUB</h3>
+		      <div class="stars-outer">
+			<div class="stars-inner"></div>
+		      </div>
+		      <span>4</span>
+		    </div>
+		    <div class="skill">
+		      <h3>Blogging</h3>
+		      <div class="stars-outer">
+			<div class="stars-inner"></div>
+		      </div>
+		      <span>4.5</span>
+		    </div>
+		  </div>
+		 </div>
+	</section>
+
+
+    
          <section id="Certifications">
             <div class="container">
                 <h2>Certifications</h2>
@@ -100,24 +257,26 @@ By showcasing this project on a portfolio website, we can demonstrate our skills
                     <br><br>
                      The test covers essential topics such as arrays, strings, linked lists, trees, and graphs, and their related algorithms. A candidate who successfully passes the HackerRank certification test has demonstrated their understanding of the basics of problem-solving in Java and their proficiency in implementing data structures and algorithms. 
                      <br><br>
-                     This certification is a valuable addition to a candidate's resume and provides them with a competitive edge in the job market.
+                     This certification is a valuable addition to a my resume and provides me with a competitive edge in the job market.
                     </p>
                     </div>
                 
-                </div>
-                <div class="project">
-                    <h3>HackerRank Certificate in SQL </h3>
+                </div><div class="project">
+                    <h3>HackerRank Certificate in SQL (Advanced) </h3>
                     <div style="width: 50%; float: left">
-			<embed src="certificate2.pdf" type="application/pdf" width="80%" height="400px">
+			<embed src="certificate4.pdf" type="application/pdf" width="80%" height="400px">
 		    </div>
                     <div style="width: 50%; height: 450px; float: left">
                     <p>
-                        The HackerRank certification on SQL is designed to assess the candidate's proficiency in SQL programming. This certification test evaluates a candidate's ability to write SQL queries, including data manipulation, data retrieval, and data definition. The test covers essential SQL topics such as basic SQL commands, advanced SQL queries, and database design concepts. A candidate who successfully passes the HackerRank certification test has demonstrated their understanding of the SQL language and their proficiency in using it to manipulate and retrieve data from databases. 
+                        I am proud to share that I have obtained a certificate in SQL (Advanced) from HackerRank Certification. This certification is a testament to my expertise in advanced SQL topics and my dedication to mastering this powerful language. 
                         <br><br>
-                        This certification is a valuable addition to a candidate's resume and provides them with a competitive edge in the job market, especially for roles that require SQL skills.
+                        The test included a range of complex topics, from advanced querying techniques to database management, and passing it required a deep understanding of SQL's capabilities and nuances. As an SQL expert, I am well-equipped to tackle complex data management challenges and provide data-driven insights that drive business success. 
+                        <br><br>
+                        I am excited to apply my knowledge and skills to help organizations unlock the full potential of their data.
                         </p>
                         </div>
                 </div>
+               
                 <div class="project">
                 <h3>Data Science with Python </h3>
                 
@@ -130,14 +289,32 @@ By showcasing this project on a portfolio website, we can demonstrate our skills
                    <br><br>
                     This certification test assesses the candidate's understanding of essential data science concepts such as data exploration, data cleaning, data visualization, machine learning, and deep learning using Python libraries such as Pandas, NumPy, Matplotlib, Scikit-learn, and Keras. A candidate who successfully passes the Simplilearn certification test has demonstrated their ability to work with large datasets, apply statistical methods, and build machine learning models to solve real-world problems. 
                    <br><br>
-                   This certification is a valuable addition to a candidate's resume and provides them with a competitive edge in the job market for data science and related roles.
+                   This certification is a valuable addition to a my resume and provides me with a competitive edge in the job market for data science and related roles.
                     </p>
                     </div>
                 
                 </div>
             </div>
         </section>
-        
+       <section class="blog" id="blog">
+	  <h2>Blogs</h2>
+	  <div class="blog-container">
+	    <div class="blog-card">
+	      <div class="blog-card-header">
+		<h3><a href="https://gourpriyanka.hashnode.dev/complete-data-structures-and-algorithims-roadmap">Complete DSA Roadmap</a></h3>
+	      </div>
+	      <div class="blog-card-body">
+		<p>Data structures and algorithms are the backbones of computer science and programming. They are crucial for writing efficient and optimized code, which is a key requirement in technical interviews and real-world programming projects.</p>
+	      </div>
+	      <div class="blog-card-footer">
+		<span class="blog-date">Apr 21, 2023</span>
+		<a href="https://gourpriyanka.hashnode.dev/complete-data-structures-and-algorithims-roadmap" class="blog-read-more">Read More</a>
+	      </div>
+	    </div>
+	    
+	  </div>
+	</section>
+
        <section id="contact">
   <h2>Contact Me</h2>
   <form action="mailto:priyankagour1755@gmail.com" method="POST" enctype="text/plain">
@@ -157,10 +334,11 @@ By showcasing this project on a portfolio website, we can demonstrate our skills
   </form>
 </section>
 
+
     </main>
     <footer>
         <div class="container">
-            <p>Copyright © Priyanka Gour</p>
+            <p>Copyright ©  2023 Priyanka Gour. All rights reserved.</p>
         </div>
     </footer>
 </body>
